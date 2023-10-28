@@ -1,0 +1,123 @@
+
+.container{
+    max-width: 1000px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* credit card 1 */
+.creditcard{
+    background-color: #8e44ad;
+    width: 315px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 10px;
+    padding-left: 10px ;
+    color: white;
+}
+.sim{
+    width: 50px;
+    padding-top: 35px;
+    margin-left: -5px;
+}
+p{
+    margin: 0;
+}
+.text{
+    font-weight: 200;
+    font-size: 25px;
+    margin-top: 5px;
+
+}
+.name{
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 15px;
+    font-family: monospace;
+}
+.date{
+    font-size: 9px;
+    }
+#flex{
+    display: flex ;
+    flex-direction: column;
+}
+.datenum{
+    font-weight: 400;
+    font-size: 18px;
+    
+}
+.visa{
+    width: 100px;
+    margin-right: 20px ;
+    margin-top: -50px ;
+    height: 35px;
+    align-self:flex-end ;
+   
+    
+}
+/* credit card 2 */
+.creditcard2{
+    background-color: #009432;
+    height:200px ;
+    width: 315px;
+    margin: 10px ;
+    border-radius:10px ;
+    color: white;
+}
+.sim2{
+    width: 50px ;
+    padding-top: 35px;
+ }
+#text{
+    font-size: 25px;
+    margin-top: -5;
+    padding-left: 3%;
+}
+.name2{
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 3%;
+}
+.date2{
+    font-size: 9px;
+    padding-left: 3%;
+}
+.flex2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+.datenum2{
+    font-weight: 400px;
+    font-size: 18px;
+    padding-left: 3%;
+}
+.visa2{
+    width: 100px;
+    margin-right: 20px ;
+    margin-top: -50px ;
+    height: 35px;
+    align-self:flex-end ;
+}
+/* credit card 3 */
+.creditcard3{
+    background-color: #0652DD;
+    height:200px ;
+    width: 315px;
+    margin: 10px ;
+    border-radius:10px ;
+    color: white;
+}
+/* credit card 4  */
+.creditcard4{
+    background-color: #161617;
+    height:200px ;
+    width: 315px;
+    margin: 10px ;
+    border-radius:10px ;
+    color: white;
+}
