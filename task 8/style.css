@@ -1,0 +1,63 @@
+main{
+   
+    
+    font-family: 'Lato', sans-serif;
+    
+}
+.container{
+    max-width: 1120px;
+    width: 72%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.comp1{
+    border: 1px solid  #999999;
+    width: 400px;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 3px;
+}
+.komp1{
+   width: 400px;
+   height: 325px;
+   object-fit: contain;
+
+}
+.inform1{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+.company1{
+    font-size: 14px;
+    margin-top: -15px;
+}
+.price{
+    color: #b12704;;
+}
+.list1{
+    list-style: none;
+    background-color: #ebebeb;
+    padding: 20px;
+}
+.buy{
+    text-decoration: none;
+    color: #853ae0;
+    font-weight: bold;
+}
+.cart{
+    padding: 13px;
+    text-decoration: none;
+    color: #853ae0;
+    font-weight: bold;
+}
+.back{
+    display: block;
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 12px;
+    color: black;
+}
