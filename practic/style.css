@@ -1,0 +1,172 @@
+body{
+    margin: 0;
+    padding:0;
+    font-family: 'Oswald', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
+.menusrc{
+    display: flex;
+}
+
+.menu{
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 400;
+   
+}
+.menu:hover{
+    color: rgba(0, 0, 0, 0.539);
+    transition: 0.2s all;
+}
+
+.search{
+    margin-left: 10px;
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    
+}
+.search:hover{
+    color: rgba(0, 0, 0, 0.539);
+    transition: 0.2s all;
+}
+.src{
+    align-self: center;
+}
+.logo{
+    align-self: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+.join{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 0px 20px;
+}
+.join:hover{
+    color: rgba(0, 0, 0, 0.539);
+    transition: 0.2s all;
+}
+.sign{
+    font-size: 14px;
+    font-weight: 400;
+}
+.signicon{
+    width: 40px;
+    height: 30px;
+    
+}
+.main{
+    margin-top: 15px;
+    display: flex;
+    gap: 60px;
+    
+}
+.section1{
+    width: 55vw;
+    position: relative;
+}
+.jacket{
+    width: 100%;
+}
+.right{
+    position: absolute;
+    left: 730px;
+    bottom: 40px;
+}
+.left{
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+}
+.home{
+    color: #c0c6c9;
+    font-size: 13px;
+    
+}
+.section2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
+    
+}
+.zadig{
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 50px;
+}
+.coat{
+    font-size: 28px;
+    font-weight: 200;
+}
+.div1{
+    display: flex;
+    gap: 20px;
+    color: #bfc5c9;
+    font-size: 14px;
+}
+.chat{
+    text-decoration:underline 1px ;
+}
+button{
+    background-color: white;
+    border: 1px solid #bfc5c9;
+    width: 50px;
+    height: 40px;
+    border-radius: 2px ;
+}
+button:active{
+    border: 2px solid black;
+}
+.buttondiv2{
+    margin-top: 30px;
+}
+.add{
+    background-color: black;
+    color: white;
+    width: 170px;
+    border-radius: 2px;
+}
+.wish{
+    border: white;
+    box-shadow: 0 2px 12px -2px hsla(213.33333333333331, 10.89%, 40.88%, 0.20);
+    width: 130px;
+}
+.price{
+    margin-top: -20px;
+}
+.div4{
+    margin-top: 50px;
+    display: flex;
+    gap: 40px;
+    color: #bfc5c9;
+    font-size: 14px;
+}
+.detal{
+    font-size: 14px;
+}
+.end{
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+
+
