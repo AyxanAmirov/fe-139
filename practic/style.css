@@ -1,172 +1,387 @@
 body{
     margin: 0;
-    padding:0;
-    font-family: 'Oswald', sans-serif;
-}
-.container{
-    width: 100%;
-    height: 100vh;
-}
-.heading{
-    display: flex;
-    justify-content: space-between;
-}
-.menusrc{
-    display: flex;
-}
-
-.menu{
-    padding: 5px 20px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    font-size: 14px;
-    font-weight: 400;
-   
-}
-.menu:hover{
-    color: rgba(0, 0, 0, 0.539);
-    transition: 0.2s all;
-}
-
-.search{
-    margin-left: 10px;
-    display: flex;
-    gap: 10px;
-    font-size: 14px;
-    font-weight: 400;
-    
-}
-.search:hover{
-    color: rgba(0, 0, 0, 0.539);
-    transition: 0.2s all;
-}
-.src{
-    align-self: center;
-}
-.logo{
-    align-self: center;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
 }
 a{
     text-decoration: none;
     color: black;
-    font-size: 18px;
-    font-weight: 500;
 }
-.join{
+/* Nav */
+.head{
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.mass{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+.menu{
     display: flex;
     align-items: center;
-    gap: 30px;
-    padding: 0px 20px;
+    gap: 150px;
 }
-.join:hover{
-    color: rgba(0, 0, 0, 0.539);
-    transition: 0.2s all;
+.iconimg1{
+    width: 20px;
 }
-.sign{
+.fire{
+    width: 15px;
+    
+}
+.font{
+    color: #1b1b1b;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 700;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
 }
-.signicon{
-    width: 40px;
-    height: 30px;
-    
-}
-.main{
-    margin-top: 15px;
-    display: flex;
-    gap: 60px;
-    
+/* Container */
+.hed{
+    margin-top: 33px;
 }
 .section1{
-    width: 55vw;
-    position: relative;
+ width: 100%;
+ display: flex;
+ position: relative;
 }
-.jacket{
-    width: 100%;
+.childphoto{
+    width: 40vw;
+    height: 85vh;
+    margin-right: 160px;
 }
-.right{
+.just{
+    font-size: 5.0em;
+    text-transform: capitalize;
+    font-weight: 100;
+    width: 25vw;
+}
+.our{
+    font-weight: 100;
+    max-width: 380px;
+}
+.shopbutton{
+    padding: 20px 32px;
+    border-radius: 50em;
+    border: 1px solid rgba(27,27,27,.2);
+    font-size: 12px;
+    letter-spacing: 1.1px;
+    font-weight: 600;
+}
+.shopbutton:hover{
+    background-color: black;
+    color: white;
+}
+.lookbook{
+    width: 450px;
+    height: 160px;
+    display: flex;
+    background-color: black;
+    padding: 25px;
     position: absolute;
-    left: 730px;
-    bottom: 40px;
+    right: 0;
+    bottom: 0;
 }
-.left{
-    position: absolute;
-    left: 40px;
-    bottom: 40px;
+.cild{
+    width: 190px;
+    height: 160px;
 }
-.home{
-    color: #c0c6c9;
-    font-size: 13px;
+.inform{
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
     
 }
+.daily{
+    color: white;
+    font-weight: 100;
+    font-size: 14px;
+}
+h5{
+    color: white;
+}
+.righticon{
+    position: absolute;
+    right: 620px;
+    bottom: 60px;
+}
+.lefticon{
+    position: absolute;
+    right: 710px;
+    bottom: 60px;
+}
+.righti{
+    width: 30px;
+    border: 1px solid rgba(27,27,27,.2);
+    border-radius: 50%;
+    padding: 10px;
+}
+.lefti{
+    width: 28px;
+    border: 1px solid rgba(27,27,27,.2);
+    border-radius: 50%;
+    padding: 11px;
+}
+.righti:hover{
+    border: 1px solid black;
+}
+.lefti:hover{
+  border: 1px solid black;
+}
+/* section2 */
 .section2{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-self: flex-start;
+    font-family: 'Raleway', sans-serif;
     
 }
-.zadig{
-    font-size: 13px;
-    font-weight: 500;
-    margin-top: 50px;
+.article1{
+    display: flex;
+    justify-content: space-around;
+    padding: 230px;
+    gap: 40px;
 }
-.coat{
-    font-size: 28px;
+.eternity{
+    font-size: 3.5em;
+    font-weight: 700;
+}
+.before1{
+    display: flex;
+    flex-direction: column;
+
+}
+.before{
+    font-size: 1.1em;
+    color: #707070;
+    max-width: 50vw ;
     font-weight: 200;
 }
-.div1{
+.article2{
     display: flex;
-    gap: 20px;
-    color: #bfc5c9;
-    font-size: 14px;
+    justify-content: space-around;
 }
-.chat{
-    text-decoration:underline 1px ;
+.child3{
+    width: 400px;
+
 }
-button{
-    background-color: white;
-    border: 1px solid #bfc5c9;
-    width: 50px;
-    height: 40px;
-    border-radius: 2px ;
+.child4{
+    width: 400px;
+    height: 450px;
+    align-self: center;
+    margin-left: -270px;
+    background-image: url(https://assets.website-files.com/606072483975b0a200b7dff6/606446a08672222faa84d088_87074765_91_D5.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
 }
-button:active{
-    border: 2px solid black;
-}
-.buttondiv2{
-    margin-top: 30px;
-}
-.add{
-    background-color: black;
+.child5{
     color: white;
-    width: 170px;
-    border-radius: 2px;
+    font-size: 2em;
+    font-weight: 700;
+    max-width: 20vw;
+    margin-left: 15px;
+    
 }
-.wish{
-    border: white;
-    box-shadow: 0 2px 12px -2px hsla(213.33333333333331, 10.89%, 40.88%, 0.20);
-    width: 130px;
+.shopnow{
+    color: white;
+    margin-left: 15px;
+    font-weight: 700;
+    
 }
-.price{
-    margin-top: -20px;
+/* section3 */
+.section3{
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    align-content: center;
+    position: relative;
 }
-.div4{
+
+.menu1{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+ul li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nava{
+    color: #a4a4a4;
+    font-size: 12px;
+    font-weight: 700;
+}
+.nava:active{
+    color: black;
+    border-bottom: 2px solid black;
+}
+.write{
+    text-align: center;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    max-width: 50vw;
+    font-weight: 100;
+}
+.child8{
+    width: 80%;
     margin-top: 50px;
+}
+.right3{
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 20px;
+    position: absolute;
+    right: 400px;
+    bottom: 360px;
+    background-color: white;
+}
+/* section4 */
+.section4{
     display: flex;
-    gap: 40px;
-    color: #bfc5c9;
-    font-size: 14px;
+    flex-direction: column;
+    margin-top: 200px;
+    position: relative;
 }
-.detal{
-    font-size: 14px;
-}
-.end{
-    margin-top: 30px;
+.instagram{
     display: flex;
-    gap: 10px;
+    justify-content: space-around;
 }
+.instagram1{
+    font-size: 3.5em;
+    font-weight: 700;
+    width: 25vw;
+}
+.instabtn{
+    border-radius: 20px;
+    width: 200px;
+    height: 60px;
+    padding: 20px;
+    align-self: center;
+    font-weight: 700;
+    background-color: #fff;
+    border-color: rgba(27,27,27,.2);
+}
+.instabtn:hover{
+    background-color: black;
+    border-color: black;
+    color: white;
+}
+.childrean{
+    display: flex;
+    justify-content: center;
+}
+.child10{
+    width: 400px;
+    height: 440px;
+}
+
+.lefticon3{
+    position: absolute;
+    left: 60px;
+    bottom: 30%;
+}
+.righticon3{
+    position: absolute;
+    right: 60px;
+    bottom: 30%;
+}
+.leftic{
+    width: 28px;
+    border: 1px solid rgba(27,27,27,.2);
+    border-radius: 50%;
+    padding: 11px;
+}
+.rightic{
+    width: 28px;
+    border: 1px solid rgba(27,27,27,.2);
+    border-radius: 50%;
+    padding: 11px;
+}
+/* section5 */
+.section5{
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+}
+.style{
+    display: flex;
+    justify-content: space-around;
+}
+.feed{
+    font-size: 3.5em;
+    font-weight: 700;
+}
+.articlebtn{
+    border-radius: 20px;
+    width: 200px;
+    height: 60px;
+    padding: 20px;
+    align-self: center;
+    font-weight: 700;
+    background-color: black;
+    border-color: white;
+    color: white;
+}
+.articlebtn:hover{
+    background-color: white;
+    border: 1px solid #eee;
+    color: black;
+}
+.parents{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+.parent1{
+    width: 300px;
+    margin-bottom: 40px;
+}
+.parent2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.linkt2{
+    max-width: 20vw;
+    font-size: 1.6em;
+    font-weight: 700;
+}
+/* border div */
+.borderdiv{
+    margin-top: 100px;
+    border-top: 2px solid #eee;
+    width: 100%;
+}
+/* footer */
+.footer{
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.help{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.lilinks{
+    display: inline-block;
+    font-size: 14px;
+    color: #707070;
+    margin-bottom: 16px;
+    
+}
+
 
 
 
