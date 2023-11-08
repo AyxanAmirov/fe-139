@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 *{
     box-sizing: border-box;
@@ -10,6 +11,7 @@ body{
     background-image: url(https://preview.colorlib.com/theme/startup2/img/banner/banner.png.webp) ;
     position: relative;
     background-size: cover;
+    display: flex;
     
 }
 
@@ -23,4 +25,37 @@ body{
 h1{
     color: white;
     font-size: 3.5em;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    width: 900px;
+    padding-left: auto;
+    padding-right: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+.row{
+    color: #fff;
+    font-size: 78px;
+    font-weight: 400;
+}
+.btn{
+    align-self: flex-start;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    padding: 12px 33px;
+    border-radius: 30px;
+    text-transform: capitalize;
+    background-color: blue;
+    border: 1px solid blue;
+    transition: 0.5s;
+}
+.btn:hover{
+    color: blue;
+    background-color: transparent;
 }
