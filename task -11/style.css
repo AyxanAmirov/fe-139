@@ -1,0 +1,82 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+.qualified{
+    font-size: 54px;
+    font-weight: 500;
+}
+.team{
+    color: #ffa62b;
+    font-weight: 600;
+}
+.engineer1{
+    background-image: url(https://preview.colorlib.com/theme/buildream/images/staff-1.jpg.webp);
+    background-position: top center;
+    background-size: cover;
+    height: 420px;
+    width: 100%;
+}
+.engineer2{
+    background-image: url(https://preview.colorlib.com/theme/buildream/images/staff-2.jpg.webp);
+    background-position: top center;
+    background-size: cover;
+    height: 420px;
+    width: 100%;
+}
+.engineer3{
+    background-image: url(https://preview.colorlib.com/theme/buildream/images/staff-3.jpg.webp);
+    background-position: top center;
+    background-size: cover;
+    height: 420px;
+    width: 100%;
+}
+.engineer4{
+    background-image: url(https://preview.colorlib.com/theme/buildream/images/staff-4.jpg.webp);
+    background-position: top center;
+    background-size: cover;
+    height: 420px;
+    width: 100%;
+}
+.h3p{
+  text-align: center;
+  
+}
+h3{
+    color: #3d424a;
+    font-size: 20px;
+    font-weight: 500;
+}
+p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #999999;
+    text-transform: uppercase;
+}
+.hover1:hover{
+    background-color: #ffa62b;
+}
+.hover1:hover p{
+    color: white;
+}
+.hover2:hover{
+    background-color: #ffa62b;
+}
+.hover2:hover p{
+    color: white;
+}
+.hover3:hover{
+    background-color: #ffa62b;
+}
+.hover3:hover p{
+    color: white;
+}
+.hover4:hover{
+    background-color: #ffa62b;
+}
+.hover4:hover p{
+    color: white;
+}
+
