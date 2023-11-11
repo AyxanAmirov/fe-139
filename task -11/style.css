@@ -4,6 +4,10 @@ body{
 *{
     box-sizing: border-box;
 }
+ul li{
+    list-style: none;
+    padding: 0;
+}
 .qualified{
     font-size: 54px;
     font-weight: 500;
@@ -12,33 +16,30 @@ body{
     color: #ffa62b;
     font-weight: 600;
 }
-.engineer1{
-    background-image: url(https://preview.colorlib.com/theme/buildream/images/staff-1.jpg.webp);
+.hover{
+    position: relative;
+}
+.engineer{
     background-position: top center;
     background-size: cover;
     height: 420px;
     width: 100%;
+}
+.engineer1{
+    background-image: url(https://preview.colorlib.com/theme/buildream/images/staff-1.jpg.webp);
+
 }
 .engineer2{
     background-image: url(https://preview.colorlib.com/theme/buildream/images/staff-2.jpg.webp);
-    background-position: top center;
-    background-size: cover;
-    height: 420px;
-    width: 100%;
+    
 }
 .engineer3{
     background-image: url(https://preview.colorlib.com/theme/buildream/images/staff-3.jpg.webp);
-    background-position: top center;
-    background-size: cover;
-    height: 420px;
-    width: 100%;
+    
 }
 .engineer4{
     background-image: url(https://preview.colorlib.com/theme/buildream/images/staff-4.jpg.webp);
-    background-position: top center;
-    background-size: cover;
-    height: 420px;
-    width: 100%;
+    
 }
 .h3p{
   text-align: center;
@@ -55,28 +56,33 @@ p{
     color: #999999;
     text-transform: uppercase;
 }
-.hover1:hover{
+.hover:hover{
     background-color: #ffa62b;
 }
-.hover1:hover p{
+.hover:hover p{
     color: white;
 }
-.hover2:hover{
+.hover:hover .icons{
+    opacity: 1;
+}
+.icons{
+    position: absolute;
+    bottom: 0;
+    left: -30px;
+    bottom: 120px;
+    opacity: 0;
+    
+  }
+  .icon{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #3d424a;
+  }
+  .icon1{
+    font-size: 18px;
+    margin-top: 11px;
+  }
+  .icon:hover{
     background-color: #ffa62b;
-}
-.hover2:hover p{
-    color: white;
-}
-.hover3:hover{
-    background-color: #ffa62b;
-}
-.hover3:hover p{
-    color: white;
-}
-.hover4:hover{
-    background-color: #ffa62b;
-}
-.hover4:hover p{
-    color: white;
-}
-
+  }
