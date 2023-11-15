@@ -1,0 +1,73 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #999999;
+    background-color: #f8f8f8;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.our-blog{
+    color: #ffa62b;
+    font-weight: 600;
+}
+.recent-blog{
+    font-size: 54px;
+    font-weight: 500;
+    margin-top: -10px;
+    color: black;
+}
+/* boxes */
+.box{
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 300px;
+    
+}
+
+.box-1-1{
+      background-image: url(https://preview.colorlib.com/theme/buildream/images/image_1.jpg.webp);
+      position: relative;
+}
+.box-1-2{
+    background-image: url(https://preview.colorlib.com/theme/buildream/images/image_2.jpg.webp);
+    position: relative;
+}
+.box-1-3{
+    background-image: url(https://preview.colorlib.com/theme/buildream/images/image_3.jpg.webp);
+    position: relative;
+}
+.text{
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+}
+.texts{
+    gap: 8px;
+    text-transform: uppercase;
+    font-size: 13px ;
+    margin-left: 10px;
+}
+.icons{
+    color: #ffa62b;
+    font-weight: 500px;
+}
+.biggest1{
+    color: black;
+}
+.position{
+    position: absolute;
+    padding: 15px;
+    background-color: #3d424a; 
+    text-align: center;
+    color: white;
+    bottom: 0;
+    left: 20px;
+}
+.biggest1:hover{
+    color: #ffa62b; 
+    transition: .2s all;
+}
