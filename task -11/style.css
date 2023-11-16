@@ -4,6 +4,7 @@ body{
 *{
     box-sizing: border-box;
 }
+
 ul li{
     list-style: none;
     padding: 0;
@@ -25,6 +26,7 @@ ul li{
     height: 420px;
     width: 100%;
 }
+
 .engineer1{
     background-image: url(https://preview.colorlib.com/theme/buildream/images/staff-1.jpg.webp);
 
@@ -86,3 +88,6 @@ p{
   .icon:hover{
     background-color: #ffa62b;
   }
+.box-1{
+  margin-bottom: 40px;
+ }
