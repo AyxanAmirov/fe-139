@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://preview.colorlib.com/theme/express/images/hero_1.jpg.webp);
+    background-size: cover;
+    position: relative;
+    
+
+}
+
+header::before{
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    
+}
+.head-site{
+    position: relative;
+    z-index: 2;
+    padding:20px ;
+}
+.logo-head{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+}
+.menu-items{
+    display: flex;
+    font-size: 14px;
+    padding: 10px 15px;
+    color: #fff;
+    justify-content: space-between;
+    
+}
+.menu-elements{
+    color: rgba(255, 255, 255, 0.7);
+    text-transform:capitalize;
+    position: relative;
+    
+}
+.items{
+    color: black;
+    text-transform:capitalize;
+    padding: 10px;
+}
+.elements{
+    width: 200px;
+    background-color: #fff;
+    padding: 20px 30px 20px;
+    top: 30px;
+    left: -15px;
+    position: absolute;
+    box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ;
+
+}
+.down-icon{ 
+    margin-left: 3px;
+    font-size: 10px;
+}
+.sub-elements{
+    width: 200px;
+    background-color: #fff;
+    padding: 20px 30px 20px;
+    top: 60px;
+    left: 200px;
+    position: absolute;
+    box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ;
+    
+}
+.sub-items{
+    padding: 10px ;
+}
+.menu-elements:hover .elements{
+    opacity: 1;
+    visibility: visible;
+}
+.items:hover .sub-elements{
+    opacity: 1;
+    visibility: visible;
+}
+.right-icon{
+    font-size: 10px;
+    margin-left: 37px;
+}
+.main-intro{
+    position: relative;
+    z-index: 2;
+}
+
+.head-txt{
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.button{
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #fff; 
+    color: #000;
+}
+
+.button:hover{
+    background-color: #0e49b5;
+    color: #fff;
+    cursor: pointer;
+}
+.txt{
+    font-weight: 400;
+    font-size: 14px;
+    color:rgba(255, 255, 255, 0.5);
+}
+.intro{
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.watch{
+    color: #fff;
+    font-size: 14px;
+    margin-left: 15px;
+}
