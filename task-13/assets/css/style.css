@@ -1,18 +1,17 @@
-*{
+* {
     box-sizing: border-box;
 }
-header{
+
+header {
     width: 100%;
     height: 100vh;
     background-image: url(https://preview.colorlib.com/theme/express/images/hero_1.jpg.webp);
     background-position: center center;
     background-size: cover;
     position: relative;
-    
-
 }
 
-header::before{
+header::before {
     position: absolute;
     content: "";
     background-color: rgba(0, 0, 0, 0.6);
@@ -21,38 +20,57 @@ header::before{
     right: 0;
     bottom: 0;
     z-index: 1;
-    
+
 }
-.head-site{
+
+.head-site {
     position: relative;
     z-index: 2;
-    padding:20px ;
+    padding: 10px;
 }
-.logo-head{
+
+.navigation {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo-head {
     font-size: 24px;
     color: #fff;
     font-weight: 700;
 }
-.menu-items{
+
+.menu-items {
     display: flex;
     font-size: 14px;
     padding: 10px 15px;
     color: #fff;
     justify-content: space-between;
-    
+    max-width: 550px;
+    width: 100%;
+
 }
-.menu-elements{
+
+.menu-elements {
     color: rgba(255, 255, 255, 0.7);
-    text-transform:capitalize;
+    text-transform: capitalize;
     position: relative;
-    
+
 }
-.items{
+
+.items {
     color: black;
-    text-transform:capitalize;
+    text-transform: capitalize;
     padding: 10px;
 }
-.elements{
+
+.elements {
     width: 200px;
     background-color: #fff;
     padding: 20px 30px 20px;
@@ -62,14 +80,16 @@ header::before{
     box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.1);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ;
+    transition: all 0.3s;
 
 }
-.down-icon{ 
+
+.down-icon {
     margin-left: 3px;
     font-size: 10px;
 }
-.sub-elements{
+
+.sub-elements {
     width: 200px;
     background-color: #fff;
     padding: 20px 30px 20px;
@@ -79,64 +99,88 @@ header::before{
     box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.1);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ;
-    
+    transition: all 0.3s;
+
 }
-.sub-items{
-    padding: 10px ;
+
+.sub-items {
+    padding: 10px;
 }
-.menu-elements:hover .elements{
+
+.menu-elements:hover .elements {
     opacity: 1;
     visibility: visible;
 }
-.items:hover .sub-elements{
+
+.items:hover .sub-elements {
     opacity: 1;
     visibility: visible;
 }
-.right-icon{
+
+.right-icon {
     font-size: 10px;
     margin-left: 37px;
 }
-.main-intro{
+
+.main-intro {
     position: relative;
     z-index: 2;
+    height: 100%;
 }
-.intro{
+
+.overlay {
     height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height: 45%;
+    justify-content: space-between;
 
 }
-.head-txt{
+
+.head-txt {
     font-size: 50px;
     font-weight: 700;
     color: #fff;
 }
 
-.button{
+.button {
     padding: 15px 30px;
     border-radius: 30px;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 700;
-    background-color: #fff; 
+    background-color: #fff;
     color: #000;
 }
 
-.button:hover{
+.button:hover {
     background-color: #0e49b5;
     color: #fff;
     cursor: pointer;
 }
-.txt{
+.txt-div{
+    margin-top: -30px;
+}
+.txt {
+    width: 530px;
     font-weight: 400;
     font-size: 14px;
-    color:rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.watch{
+.watch {
     color: #fff;
     font-size: 14px;
     margin-left: 15px;
+}
+.links{
+    display: flex;
+    justify-content: center;
 }
