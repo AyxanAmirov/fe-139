@@ -185,3 +185,7 @@ header::before {
     display: flex;
     justify-content: center;
 }
+.menu-icon{
+ font-size: 25px;
+ display: none;
+}

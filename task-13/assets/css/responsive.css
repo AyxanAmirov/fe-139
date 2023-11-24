@@ -1,8 +1,22 @@
 
-@media   (max-width:792){
+@media   (max-width:792px){
     .head-txt {
         font-size: 38px;
         
     }
+    .menu-items{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .txt{
+        width: 430px;
+    }
     
+}
+@media (max-width:430px){
+    .txt{
+        width: auto;
+    }
 }
