@@ -1,0 +1,38 @@
+.grid-container{
+    width: 75%;
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
+    grid-template-rows: repeat(3,150px);
+    gap: 10px;
+
+}
+.grid-items-1{
+
+    background-color: pink;
+}
+.grid-items-2{
+    background-color: turquoise;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.grid-items-3{
+   background-color: lime;
+    
+}
+.grid-items-4{
+  background-color: blue;
+  grid-row-end: span 3;
+  
+}
+.grid-items-5{
+    grid-row-end: span 2;
+    background-color: tomato;
+}
+.grid-items-6{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-end: span 2;
+    background-color: orange;
+}
