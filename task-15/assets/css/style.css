@@ -46,6 +46,7 @@ body{
     position: absolute;
     backface-visibility: hidden;
     transition: 0.6s ease-in-out;
+    color: blue;
 }
 .back-menu{
     transform: rotateX(-180deg);
