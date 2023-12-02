@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    position: relative;
+    cursor: pointer;
+    width: 200px;
+    height: 300px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    transition: all ease-in .7s;
+    background-color: #96ff0d;
+}
+.img-1{
+      
+}
+.image{
+    width: 100%;
+    height: 100%;
+    transition: all ease-in .7s;
+}
+
+.box:hover .image{
+    transform: translateY(-100%);
+}
+.box:hover .img-1{
+    transform: scale(-30%) translateY(-200%);
+    transition: 2s;
+}
