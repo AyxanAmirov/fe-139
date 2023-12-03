@@ -1,0 +1,42 @@
+body{
+    background-color: #ecf0f1;
+}
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.loader-1, .loader-2, .loader-3{
+   border: 5px solid #555;
+   display: inline-block;
+   width: 5px;
+   height: 5px;
+   background-color: #555;
+   margin-left: 20px;
+   border-radius: 50%;
+}
+.loader-1{
+    animation: load1 .6s ease-in-out alternate  infinite;
+}
+@keyframes load1{
+   100%{
+    transform: scale(2);
+   }
+}
+.loader-2{
+    animation: load2 .6s ease-in-out alternate .2s infinite;
+}
+@keyframes load2{
+    100%{
+      transform: scale(2);
+    }
+}
+.loader-3{
+    animation: load2 .6s ease-in-out alternate .4s infinite;
+}
+@keyframes load3{
+    100%{
+     transform: scale(2);
+    }
+ }
