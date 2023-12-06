@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+.height-32{
+    height:32rem ;
+}
+.bg-task{
+    background-color: #777;
+}
+.image{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+.border-bottom-1{
+    border-bottom: 1px solid black;
+}
+.mb-px{
+    margin-bottom: 50px;
+}
+.img{
+    width: auto;
+}
