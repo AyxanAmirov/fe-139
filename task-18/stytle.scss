@@ -1,0 +1,23 @@
+@mixin createLayout($size, $max, $min) {
+    @media screen and (max-width:$max) and (min-width:$min) {
+       @for $i from 1 to 13{
+
+            .col-#{$size}-#{$i} {
+                width: calc(100%/12*$i);
+            }
+
+       }
+    }
+}
+
+@include createLayout("xs", 576px, 0px);
+@include createLayout("sm", 768px, 576px);
+@include createLayout("md", 992px, 768px);
+@include createLayout("lg", 1200px, 992px);
+@include createLayout("xl", auto, 1200px);
+
+
+.row{
+    display: flex;
+}
+
