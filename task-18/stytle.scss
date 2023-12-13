@@ -1,23 +1,121 @@
-@mixin createLayout($size, $max, $min) {
-    @media screen and (max-width:$max) and (min-width:$min) {
-       @for $i from 1 to 13{
+body{
+  box-sizing: border-box;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1320px;
+}
+// .row {
+//   display: flex;
+// }
+.image {
+  width: 300px;
+  height: fit-content;
+  text-align: right;
+}
+// .justify-content-between {
+//   justify-content: space-between;
+// }
+.txt {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  // width: 60%;
+}
+// @mixin createLayout($size, $max, $min, $con-width) {
+//   @media screen and (max-width: $max) and (min-width: $min) {
+//     .container {
+//       min-width: $con-width;
+//     }
+//     @for $i from 1 to 13 {
+//       .col-#{$size}-#{$i} {
+//         width: #{calc(100% / 12 * $i)};
+//       }
+//     }
+//   }
+// }
 
-            .col-#{$size}-#{$i} {
-                width: calc(100%/12*$i);
-            }
+// @include createLayout("xs", 576px, 0px, 100%);
+// @include createLayout("sm", 768px, 576px, 540px);
+// @include createLayout("md", 992px, 768px, 720px);
+// @include createLayout("lg", 1200px, 992px, 960px);
+// @include createLayout("xl", auto, 1200px, 1140px);
 
-       }
+@mixin grid {
+  max-width: 1320px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 0px;
+  display: grid;
+}
+.grid-container {
+  @include grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 400px;
+
+  .image {
+    margin-left: 200px;
+  }
+}
+.heading-txt {
+  color: #000;
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 101.385%;
+}
+.grid-container-2 {
+  @include grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 400px;
+  align-items: center;
+  .box-head {
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 130%;
+  }
+  .box-txt {
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 130%;
+    width: 45%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .heading-txt {
+    color: #000;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 101.385%;
+  }
+  .grid-container {
+    @include grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(140px, 2);
+    justify-content: center;
+
+    .txt {
+      color: #000;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 150%;
     }
+    img {
+      width: 150px;
+    }
+  }
+
+  .grid-container-2 {
+    @include grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(200px, 2);
+    align-items: center;
+    img {
+      display: none;
+    }
+  }
 }
-
-@include createLayout("xs", 576px, 0px);
-@include createLayout("sm", 768px, 576px);
-@include createLayout("md", 992px, 768px);
-@include createLayout("lg", 1200px, 992px);
-@include createLayout("xl", auto, 1200px);
-
-
-.row{
-    display: flex;
-}
-
