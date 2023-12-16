@@ -1,0 +1,84 @@
+.container {
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.d-flex{
+    display: flex;
+}
+.align-center{
+    align-items: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.flex-column{
+    flex-direction: column;
+}
+.justify-center{
+    justify-content: center;
+}
+.gap-30{
+    gap: 30px;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+@mixin flex-construction{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+@mixin createLayout ($size) {
+    @for $i from 1 to 13 {
+      .col-#{$size}-#{$i} {
+        width: #{calc(100% / 12 * $i)};
+      }
+    }
+  }
+@media screen and (min-width:576px) {
+    .container {
+        max-width: 540px;
+    }
+    @include createLayout("sm")
+}
+
+@media screen and (min-width:768px) {
+    .container {
+        max-width: 720px;
+    }
+    @include createLayout("md")
+    
+}
+/* lg */
+@media screen and (min-width:992px) {
+    .container {
+        max-width: 960px;
+    }
+
+    @include createLayout("lg")
+}
+
+/* xl */
+@media screen and (min-width:1200px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    @include createLayout("xl")
+}
+
+@media screen and (max-width:576px) {
+    .container {
+        width: 100%;
+        padding-right: calc(1.5rem * .7);
+        padding-left: calc(1.5rem * .7);
+    }
+
+    @include createLayout("")
+}
+
