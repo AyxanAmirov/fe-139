@@ -105,17 +105,49 @@
 
 // task-19
 
-// let price = prompt("Qiyməti daxil edin:")
-// ??
+// let price = prompt("Qiyməti daxil edin (539.90):")
+// let slice = price.split(".")
+// let manat = slice[0]
+// let qepik = slice[1]
+// console.log(`${manat} manat ${qepik} qepik`)
 
 // task-20
 
 // let price = Number(prompt("Maaşınızı daxil edin:"))
 // alert("Vergisiz maaşınız:" + ( price + (price * 13 / 100) ) )
 
-//task-21
-// let name = prompt("ad,soyad,ata ad; daxil edin:")
-// alert(name)
+// task-21
+// let user_name = prompt("Ad,Soyad,Ata adı daxil edin:");
+// let full_name = user_name.split(" ");
+// let user = (full_name[0]);
+// let surname = (full_name[1][0]);
+// let parent = (full_name[2][0]);
+// console.log(`${user} ${surname}.${parent}.`);
+
+//task-22
+// let price = Number(prompt("Məbləği  daxil edin"));
+// let faiz = Number(prompt("Faizi  daxil edin"));
+// let date = Number(prompt("Müddəti  daxil edin"));
+// let total_price = (price*faiz)/100 ;
+// let qazanc = (total_price*date) + price;
+// alert(`qazancınız: ${qazanc}`);
+
+//task-23
+// let value = 10
+// console.log(value<11);
+// console.log(value<=10);
+// console.log(value<20);
+// console.log(value<11);
+// console.log(value<19);
+
+// let value = 20
+// console.log(value<11);
+// console.log(value<=10);
+// console.log(value<20);
+// console.log(value<11);
+// console.log(value<19);
+
+
 
 // task-24
 // let age = prompt("yaşınızı daxil edin:")
@@ -124,6 +156,42 @@
 // }else{
 //     alert("Access granted")
 // }
+
+//task-25
+
+// let value = prompt("3 dənə 2 rəqəmli ədəd daxil edin:").split(" ")
+// let num_1= value[0]
+// let num_2= value[1]
+// let num_3= value[2]
+
+// if(num_1<num_2 && num_2<num_3 || num_1>num_2 && num_2>num_3){
+//     alert(num_2)
+// }else if (num_1>num_3 && num_2>num_3 || num_1<num_3 && num_2>num_3){
+//     alert(num_3)
+// }else if (num_1>num_2 && num_1<num_3 || num_1<num_2 && num_1>num_3){
+//     alert(num_1)
+// }
+
+
+
+
+
+
+//task-26
+
+// let year = +prompt("il daxil edin :")
+// if(year%4==0){
+//     alert("Bu il uzun ildir")
+// }else{
+//     alert("Bu il qısa ildir")
+// }
+
+
+
+
+
+
+
 
 //task-27
 // let id = prompt("enter product id:");
@@ -157,7 +225,6 @@
 // else{
 //     alert("Cinsiyyətinizi düzgün qeyd edin")
 // }
-
 
 //task-29
 // let id = prompt("Ay-ı daxil edin:");
@@ -201,4 +268,52 @@
 //     break;
 //     default:
 //         alert("Düzgün seçim edin")
+// }
+
+//task-30
+
+// let date = prompt("Tarixi daxil edin(2009.12.19):").split(".");
+// let year = date[0];
+// let month = date[1];
+// let day = date[2];
+
+// switch (month) {
+//   case "1":
+//     alert(`${day} Yanvar ${year}`);
+//     break;
+//   case "2":
+//     alert(`${day} Fevral ${year}`);
+//     break;
+//   case "3":
+//     alert(`${day} Mart ${year}`);
+//     break;
+//   case "4":
+//     alert(`${day} Aprel ${year}`);
+//     break;
+//   case "5":
+//     alert(`${day} May ${year}`);
+//     break;
+//   case "6":
+//     alert(`${day} Iyun ${year}`);
+//     break;
+//   case "7":
+//     alert(`${day} Iyul ${year}`);
+//     break;
+//   case "8":
+//     alert(`${day} Avqust ${year}`);
+//     break;
+//   case "9":
+//     alert(`${day} Sentyabr ${year}`);
+//     break;
+//   case "10":
+//     alert(`${day} Oktyabr ${year}`);
+//     break;
+//   case "11":
+//     alert(`${day} Noyabr ${year}`);
+//     break;
+//   case "12":
+//     alert(`${day} Dekabr ${year}`);
+//     break;
+//   default:
+//     alert("doğru seçim edin");
 // }
