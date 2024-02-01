@@ -1,0 +1,214 @@
+header {
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+/* logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+.company {
+  max-width: 100px;
+}
+.company-name {
+  color: gold;
+}
+.company-name > span {
+  color: red;
+  margin-right: 5px;
+}
+/* menu */
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+.add {
+  display: flex;
+  gap: 10px;
+}
+.basket-ui,
+.fav-ui {
+  font-size: 25px;
+  color: #fff;
+  transition: 0.3s;
+}
+.basket-ui:hover {
+  color: gold;
+}
+.fav-ui:hover {
+  color: red;
+}
+/* toggle menu */
+.toggle-icon {
+  position: relative;
+  display: none;
+}
+.toggle {
+  font-size: 30px;
+}
+.toggle-menu {
+  position: absolute;
+  right: 40px;
+  width: 200px;
+  background-color: rgb(102, 100, 100);
+  height: 200px;
+  opacity: 0.7;
+  top: 90px;
+  border-radius: 10px;
+  display: none;
+}
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  padding: 15px 0;
+}
+.about {
+  font-size: 15px;
+  color: #fff;
+}
+/* modal */
+.basket-data {
+  background-color: rgb(188, 203, 216);
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  right: 80px;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  border-radius: 20px;
+  display: none;
+}
+.basket-name{
+    color: cornflowerblue;
+}
+.basket-box {
+  width: 100%;
+  height: 100px;
+  background-color: cornflowerblue;
+  display: flex;
+  text-align: center;
+  gap: 30px;
+  align-items: center;
+}
+.basket-image {
+  height: 100%;
+}
+.rate-count-name {
+  color:cornsilk;
+  font-size: 14px;
+}
+.name-basket-item{
+    color: #1c1b1b;
+    font-weight: 600;
+}
+.trash{
+    color: #fff;
+    font-size: 20px;
+    transition: .3s ease;
+}
+.trash:hover{
+    color: red;
+}
+.total-price{
+    margin-top: 5px;
+    font-weight: 500;
+}
+/* section */
+.section {
+  margin-top: 30px;
+}
+.canteen {
+  font-size: 40px;
+  text-align: center;
+  color: gold;
+}
+.canteen > span {
+  color: red;
+}
+/* foods */
+.menu-bar {
+  margin-top: 100px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #a1b9b9;
+  border-radius: 50px;
+  padding: 20px;
+  margin-bottom: 50px;
+  min-height: 600px;
+}
+.rate-country {
+  display: flex;
+  gap: 10px;
+  font-weight: 600;
+}
+.food {
+  max-width: 250px;
+  border-radius: 30px;
+}
+.food-name {
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+}
+.food-info {
+  text-align: center;
+}
+.add-price {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.price {
+  font-size: 20px;
+  font-weight: 500;
+}
+.add-fav {
+  background-color: gold;
+  border-color: gold;
+  padding: 7px;
+  border-radius: 5px;
+}
+.add-basket {
+  background-color: red;
+  border-color: gold;
+  padding: 7px;
+  border-radius: 5px;
+}
+.basket-ui-card {
+  font-size: 25px;
+  color: #fff;
+  transition: 0.4s ease;
+}
+.fav-ui-card {
+  font-size: 25px;
+  color: #fff;
+  transition: 0.4s ease;
+}
+.add-fav:hover .fav-ui-card {
+  color: red;
+}
+.add-basket:hover .basket-ui-card {
+  color: gold;
+}
