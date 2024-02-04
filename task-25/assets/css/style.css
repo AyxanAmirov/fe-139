@@ -91,8 +91,8 @@ header {
   border-radius: 20px;
   display: none;
 }
-.basket-name{
-    color: cornflowerblue;
+.basket-name {
+  color: cornflowerblue;
 }
 .basket-box {
   width: 100%;
@@ -100,33 +100,112 @@ header {
   background-color: cornflowerblue;
   display: flex;
   text-align: center;
-  gap: 30px;
   align-items: center;
+  justify-content: space-between;
+  padding-right: 5px;
+  margin-bottom: 5px;
 }
 .basket-image {
   height: 100%;
 }
 .rate-count-name {
-  color:cornsilk;
+  color: cornsilk;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.name-basket-item{
-    color: #1c1b1b;
-    font-weight: 600;
+.name-basket-item {
+  color: #1c1b1b;
+  font-weight: 600;
 }
-.trash{
-    color: #fff;
-    font-size: 20px;
-    transition: .3s ease;
+.price-num {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
-.trash:hover{
-    color: red;
+.price-basket-item{
+  color: #000;
+  font-weight: 700;
 }
-.total-price{
-    margin-top: 5px;
-    font-weight: 500;
+.num {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trash {
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+.trash:hover {
+  color: red;
+}
+.total-price {
+  margin-top: 5px;
+  font-weight: 500;
+}
+/* fav-modal */
+.fav-data{
+  background-color: gold;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  right: 130px;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  border-radius: 20px;
+  display: none;
+}
+.fav-box{
+  width: 100%;
+  height: 100px;
+  background-color: red;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5px;
+  margin-bottom: 5px;
+}
+.trash-fav{
+  color: #fff;
+  transition: .3s ease;
+}
+.trash-fav:hover{
+  color: #000;
+}
+.name-fav-item{
+  font-weight: 500;
+}
+.fav-name{
+  color: red;
 }
 /* section */
+#search-form{
+  text-align: right;
+  margin-top: 20px;
+}
+.search{
+  width: 300px;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+.send{
+  padding: 8px;
+  border-radius: 50px;
+  background-color: gold;
+  color: #fff;
+}
 .section {
   margin-top: 30px;
 }
@@ -157,14 +236,18 @@ header {
   padding: 20px;
   margin-bottom: 50px;
   min-height: 600px;
+  max-width: 290px;
+  min-width: 290px;
 }
 .rate-country {
   display: flex;
   gap: 10px;
   font-weight: 600;
 }
+
 .food {
   max-width: 250px;
+  min-height: 250px;
   border-radius: 30px;
 }
 .food-name {

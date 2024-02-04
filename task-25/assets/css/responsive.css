@@ -1,8 +1,59 @@
-@media screen and (max-width : 995px) {
-    .menu-body{
-        display: none;
-    }
-    .toggle-icon{
-        display: block;
-    }
+@media screen and (max-width: 995px) {
+  .menu-body {
+    display: none;
+  }
+  .toggle-icon {
+    display: block;
+  }
+  .menu-bar {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .box {
+    padding: 10px;
+  }
+  header {
+    padding: 10px;
+  }
+  .basket-data,
+  .fav-data {
+    right: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .company {
+    max-width: 50px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .basket-data,
+  .fav-data {
+    right: 0;
+  }
+  .toggle-menu {
+    top: 150px;
+    right: 50px;
+  }
+  .search {
+    max-width: 130px;
+  }
+}
+@media screen and (max-width: 315px) {
+  .food {
+    max-width: 200px;
+    min-width: 200px;
+  }
+  .box {
+    max-width: 220px;
+    min-width: 220px;
+  }
+  .basket-data,
+  .fav-data {
+    width: 240px;
+  }
 }
