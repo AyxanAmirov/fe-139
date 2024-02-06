@@ -48,9 +48,9 @@
           </ul>
         </div>
         <div class="add col-lg-1">
-          <div class="fav"><i class="fa-solid fa-heart fav-ui"></i></div>
+          <div  class="fav"><i id="favIcone" class="fa-solid fa-heart fav-ui"></i></div>
           <div class="basket">
-            <i class="fa-solid fa-cart-shopping basket-ui"></i>
+            <i id="basketIcone" class="fa-solid fa-cart-shopping basket-ui"></i>
           </div>
         </div>
         <div class="toggle-icon">
@@ -70,55 +70,51 @@
       </div>
       <div class="basket-data">
         <h3 class="basket-name">Basket</h3>
-
-        <!-- <div class="basket-box">
-          <img
-            src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/129490/the-gothamist-prosciutto-burrata-sandwich-kit-4-pack.4238b1e274d50b6e09d0b488aebe64bd.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1"
-            alt=""
-            class="basket-image"
-          />
-          <div class="rate-count-name">
+        <!-- 
+        <div class="basket-box">
+          <div class="name-btn">
             <p class="name-basket-item">Sal, Kris & Charlie's Deli</p>
-            <p class="rate-basket-item">Rate:4</p>
-            <p class="count-basket-item">Astoria, NY</p>
-            <div class="price-num">
-              <p class="num">2</p>
-              <p class="price-basket-item"> 89$</p>
+            <div class="buttons">
+              <button><i class="fa-solid fa-trash trash"></i></button>
             </div>
           </div>
-          <div class="buttons">
-            <button><i class="fa-solid fa-trash trash"></i></button>
+          <div class="price-btn">
+            <div class="count-btn">
+              <p class="min"><span>-</span></p>
+              <span class="nums">1</span>
+              <p class="pls"><span>+</span></p>
+            </div>
+            <p class="num">Price:$28</p>
           </div>
-        </div> -->
-        <!-- <p class="total-price">Total Price:45$</p> -->
+          <div class="pay">
+            <p class="mustPay">Total Payment:</p>
+            <button class="payment">Pay</button>
+          </div> -->
+        </div>
       </div>
       <div class="fav-data">
         <h3 class="fav-name">Favorites</h3>
 
-        <!-- <div class="fav-box">
-          <img
-            src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/129490/the-gothamist-prosciutto-burrata-sandwich-kit-4-pack.4238b1e274d50b6e09d0b488aebe64bd.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1"
-            alt=""
-            class="basket-image"
-          />
-          <div class="rate-count-name">
-            <p class="name-fav-item">Sal, Kris & Charlie's Deli</p>
-            <p class="rate-fav-item">Rate:4</p>
-            <p class="count-fav-item">Astoria, NY</p>
-
-            <p class="price-fav-item">89$</p>
+       <!--  <div class="basket-box">
+          <div class="name-btn">
+            <p class="name-basket-item">Sal, Kris & Charlie's Deli</p>
+            <div class="buttons">
+              <button><i class="fa-solid fa-trash trash"></i></button>
+            </div>
           </div>
-          <div class="buttons">
-            <button><i class="fa-solid fa-trash trash-fav"></i></button>
+          <div class="price-btn">
+            <p class="num">Price:$28</p>
+            <p class="countryFav">Country:AZe</p>
           </div>
-        </div> -->
+          
+        </div>  -->
       </div>
     </header>
     <section class="section">
       <div class="container">
-        <h2 class="canteen">Canteen <span>Menu</span></h2>
+        <h2 class="canteen">Menu</h2>
         <form id="search-form">
-          <input type="search" class="search" placeholder="Search Sandwiches">
+          <input type="search" class="search" placeholder="Search Sandwiches" />
           <button class="send">Search</button>
         </form>
         <div class="menu-bar">
@@ -143,10 +139,11 @@
                 <i class="fa-solid fa-heart fav-ui-card"></i>
               </button>
               <button class="add-basket">
-                <i class="fa-solid fa-cart-shopping basket-ui-card"></i>
+                <span class="basket-ui-card">Add Basket</span>
+                <i></i>
               </button>
             </div>
-          </div> -->
+          </div>  -->
         </div>
       </div>
     </section>

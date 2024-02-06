@@ -8,11 +8,11 @@ const basketIcon = document.querySelector(".basket-ui");
 const modalFavBtn = document.querySelector(".fav");
 const modalFavBody = document.querySelector(".fav-data");
 const favIcon = document.querySelector(".fav-ui");
-const form = document.querySelector("#search-form")
-const searchIput = document.querySelector(".search")
+const form = document.querySelector("#search-form");
+const searchIput = document.querySelector(".search");
 
-let products = [];
-
+let cardList = [];
+let favList = [];
 runEvents();
 function runEvents() {
   let openClose = true;
@@ -27,10 +27,10 @@ function runEvents() {
   });
 
   modalBasketBtn.addEventListener("click", show);
-  modalFavBtn.addEventListener("click",showFav);
+  modalFavBtn.addEventListener("click", showFav);
   document.addEventListener("DOMContentLoaded", pageLoad);
   document.addEventListener("DOMContentLoaded", favPageLoad);
-  searchIput.addEventListener("keyup",filterMenu)
+  searchIput.addEventListener("keyup", filterMenu);
 }
 
 const url = "menu.json";
@@ -39,7 +39,7 @@ fetch(url)
   .then((menuItems) => {
     addUi(menuItems);
   });
-function addUiMain(datas){
+function addUiMain(datas) {
   menuBody.innerHTML += `
         <div class="box col-lg-3 col-md-12 col-sm-12">
         <img
@@ -56,18 +56,21 @@ function addUiMain(datas){
         <div class="add-price">
           <p class="price">${datas.price}$</p>
           <button class="add-fav" onclick="addFav('${datas.id}')">
-            <i class="fa-solid fa-heart fav-ui-card" ></i>
+            <i onclick="changeColor()" class="fa-solid fa-heart fav-ui-card" ></i>
           </button>
           <button type="button" class="add-basket" onclick="addBasket('${datas.id}')">
-            <i class="fa-solid fa-cart-shopping basket-ui-card"></i>
+                <span class="basket-ui-card">Add Basket</span>
+                <i></i>
           </button>
         </div>
       </div>
         `;
+  
 }
+
 function addUi(menuItems) {
   menuItems.forEach((datas) => {
-    addUiMain(datas)
+    addUiMain(datas);
   });
 }
 let showFavList = true;
@@ -87,169 +90,189 @@ function show() {
     basketIcon.style.color = "#fff";
     showBasket = true;
   }
+
 }
-
-
 
 function addBasket(id) {
   fetch(url)
     .then((data) => data.json())
     .then((menuItems) => {
       let foundedProduct = menuItems.find((product) => product.id === id);
-      addBasketUi(foundedProduct);
-      addStorage(foundedProduct);
+      let foundcard = cardList.find((product) => product.id === id);
+      if (!foundcard) {
+        cardList.push({ ...foundedProduct, count: 1 });
+      } else {
+        alert("Səbətdə bu məhsul mövcuddur");
+      }
+      addBasketUi();
+      localStorage.setItem("cardlist", JSON.stringify(cardList));
     });
 }
 
-function addBasketUi(foundedProduct) {
-  
-  modalBasketBody.innerHTML += `
+function addBasketUi() {
+  modalBasketBody.innerHTML = "";
+  cardList.forEach((item) => {
+    const { name, id, price, count } = item;
+    modalBasketBody.innerHTML += `
   <div class="basket-box">
-        <img src="${foundedProduct.img}" alt="" class="basket-image">
-        <div class="rate-count-name">
-            <p  class="name-basket-item">${foundedProduct.name}</p>
-            <p class="rate-basket-item">Rate:${foundedProduct.rate}</p>
-            <p class="count-basket-item">${foundedProduct.country}</p>
-            <div class="price-num">
-              <p class="num">1</p>
-              <p class="price-basket-item">Total:${foundedProduct.price}$</p>
+          <div class="name-btn">
+            <p class="name-basket-item">${name}</p>
+            <div class="buttons">
+              <button onclick="remove('${id}')"><i class="fa-solid fa-trash trash"></i></button>
             </div>
+          </div>
+          <div class="price-btn">
+            <div class="count-btn">
+            <p class="min" onclick="updateBasketCount('${id}', 'min')"><span>-</span></p>
+            <span class="nums">${count}</span>
+            <p class="pls" onclick="updateBasketCount('${id}', 'plus')"><span>+</span></p>
+            </div>
+            <p class="num">Price:${count * price}$</p>
+          </div>
+          
         </div>
-        <div class="buttons">
-            <button onclick="remove('${foundedProduct.id}')"><i class="fa-solid fa-trash trash"></i></button>
-        </div>
-    </div>
   `;
+  });
+  
+  
 }
+function updateBasketCount(id, action) {
+  let foundcard = cardList.find((product) => product.id === id);
 
+  if (action === "min") {
+    if (foundcard && foundcard.count > 1) {
+      foundcard.count--;
+    }
+  } else if (action === "plus") {
+    if (foundcard) {
+      foundcard.count++;
+    }
+  }
 
-
-
-
-function addStorage(product) {
-  checkStorage();
-  products.push(product);
-  localStorage.setItem("products", JSON.stringify(products));
+  addBasketUi();
+  localStorage.setItem("cardlist", JSON.stringify(cardList));
 }
 
 function checkStorage() {
-  if (localStorage.getItem("products") === null) {
-    products = [];
-  } else {
-    products = JSON.parse(localStorage.getItem("products"));
+  if (localStorage.getItem("cardlist")) {
+    cardList = JSON.parse(localStorage.getItem("cardlist"));
   }
+  
 }
 function pageLoad() {
   checkStorage();
-  products.forEach((product) => {
-    addBasketUi(product);
+  cardList.forEach((product) => {
+    addBasketUi();
   });
 }
-
 
 function remove(id) {
-  let foundedProduct = products.find((product) => product.id === id);
-  let index = products.indexOf(foundedProduct);
-  products.splice(index, 1);
-  localStorage.setItem("products", JSON.stringify(products));
+  let foundedProduct = cardList.find((product) => product.id === id);
+  let index = cardList.indexOf(foundedProduct);
+  cardList.splice(index, 1);
+  localStorage.setItem("cardlist", JSON.stringify(cardList));
   modalBasketBody.innerHTML = `<h3 class="basket-name">Basket</h3>`;
-  products.forEach((product) => {
-    addBasketUi(product);
+  cardList.forEach((product) => {
+    addBasketUi();
   });
 }
-
 
 //fav
 
-function showFav(){
+function showFav() {
   if (showFavList) {
     modalFavBody.style.display = "block";
     favIcon.style.color = "red";
     showFavList = false;
     modalBasketBody.style.display = "none";
     basketIcon.style.color = "#fff";
-    showBasket = true
+    showBasket = true;
   } else {
     modalFavBody.style.display = "none";
     favIcon.style.color = "#fff";
     showFavList = true;
   }
+  
 }
 
-function addFav(id){
+function addFav(id) {
   fetch(url)
-  .then((data) => data.json())
-  .then((menuItems) => {
-    let foundedProduct = menuItems.find((product) => product.id === id);
-    addfavUi(foundedProduct);
-    addFavStorage(foundedProduct);
+    .then((data) => data.json())
+    .then((menuItems) => {
+      let foundedProduct = menuItems.find((product) => product.id === id);
+      let foundcard = favList.find((product) => product.id === id);
+      if (!foundcard) {
+        favList.push({ ...foundedProduct });
+      } else {
+        alert("Yaddaşda bu məhsul mövcuddur");
+      }
+      
+      addfavUi();
+      localStorage.setItem("favlist", JSON.stringify(favList));
+    });
+}
+function addfavUi() {
+  modalFavBody.innerHTML = "";
+  favList.forEach((item) => {
+    const { name, price, country, id } = item;
+    modalFavBody.innerHTML += `
+  <div class="basket-box">
+          <div class="name-btn">
+            <p class="name-basket-item">${name}</p>
+            <div class="buttons">
+              <button onclick="removeFav('${id}')"><i class="fa-solid fa-trash trash"></i></button>
+            </div>
+          </div>
+          <div class="price-btn">
+            <p class="num">Price:${price}$</p>
+            <p class="countryFav">Country:${country}</p>
+          </div>
+          
+        </div> 
+  `;
   });
-}
-function addfavUi(fav){
-  modalFavBody.innerHTML += `
-  <div class="fav-box">
-          <img
-            src="${fav.img}"
-            alt=""
-            class="basket-image"
-          />
-          <div class="rate-count-name">
-            <p class="name-fav-item">${fav.name}</p>
-            <p class="rate-fav-item">Rate:${fav.rate}</p>
-            <p class="count-fav-item">${fav.country}</p>
+    
 
-            <p class="price-fav-item">${fav.price}$</p>
-          </div>
-          <div class="buttons">
-            <button onclick="removeFav('${fav.id}')"><i class="fa-solid fa-trash trash-fav"></i></button>
-          </div>
-        </div>
-  `
-}
-
-let favProducts = []
-function addFavStorage(product) {
-  checkFavStorage();
-  favProducts.push(product);
-  localStorage.setItem("favProducts", JSON.stringify(favProducts));
 }
 
 function checkFavStorage() {
-  if (localStorage.getItem("favProducts") === null) {
-    favProducts = [];
-  } else {
-    favProducts = JSON.parse(localStorage.getItem("favProducts"));
+  if (localStorage.getItem("favlist")) {
+    favList = JSON.parse(localStorage.getItem("favlist"));
   }
 }
 function favPageLoad() {
   checkFavStorage();
-  favProducts.forEach((product) => {
-    addfavUi(product);
+  favList.forEach((product) => {
+    addfavUi();
   });
 }
 function removeFav(id) {
-  let foundedProduct = favProducts.find((product) => product.id === id);
-  let index = favProducts.indexOf(foundedProduct);
-  favProducts.splice(index, 1);
-  localStorage.setItem("favProducts", JSON.stringify(favProducts));
+  let foundedProduct = favList.find((product) => product.id === id);
+  let index = favList.indexOf(foundedProduct);
+  favList.splice(index, 1);
+  localStorage.setItem("favlist", JSON.stringify(favList));
   modalFavBody.innerHTML = `<h3 class="fav-name">Favorites</h3>`;
-  favProducts.forEach((product) => {
-    addfavUi(product);
+  favList.forEach((product) => {
+    addfavUi();
   });
+  
 }
 
 // filter
-function filterMenu(e){
-let searchData = e.target.value.trim().toLowerCase()
-fetch(url)
-.then(data=>data.json())
-.then(product=>{
-  let found = product.filter(foods=>foods.name.toLowerCase().includes(searchData) || foods.dsc.toLowerCase().includes(searchData) )
-  menuBody.innerHTML = ''
-  found.forEach(datas=>{
-    addUiMain(datas)
-    console.log(datas);
-  })
-})
+function filterMenu(e) {
+  let searchData = e.target.value.trim().toLowerCase();
+  fetch(url)
+    .then((data) => data.json())
+    .then((product) => {
+      let found = product.filter(
+        (foods) =>
+          foods.name.toLowerCase().includes(searchData) ||
+          foods.dsc.toLowerCase().includes(searchData)
+      );
+      menuBody.innerHTML = "";
+      found.forEach((datas) => {
+        addUiMain(datas);
+        console.log(datas);
+      });
+    });
 }
-
