@@ -1,0 +1,259 @@
+.login {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+.login p {
+  padding: 0.75rem;
+  font-weight: 500;
+  color: rgb(100, 116, 139);
+}
+.search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}
+.search form {
+  position: relative;
+}
+.search-input {
+  width: 100%;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-left: 15px;
+  border-radius: 0.25rem;
+  border: transparent;
+  font-size: 100%;
+}
+.btn {
+  position: absolute;
+  right: 10px;
+  padding: 0.5rem;
+  background-color: rgb(8 145 178);
+  border-radius: 0.25rem;
+  border: none;
+  font-weight: 600;
+  color: #fff;
+  font-size: 18px;
+  top: 5px;
+}
+
+.user-informations {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.inform {
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.book-icon {
+  color: rgb(52 211 153);
+  font-size: 1.5rem;
+  padding: 10px;
+  background-color: rgb(184, 255, 229);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+}
+.repos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.num {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.repo {
+  font-weight: 300;
+  text-transform: capitalize;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.persons-icon {
+  color: rgb(217 70 239);
+  font-size: 1.5rem;
+  padding: 10px;
+  background-color: rgb(243, 176, 254);
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+.square-icon {
+  color: rgb(202 138 4);
+  font-size: 1.5rem;
+  padding: 10px;
+  background-color: rgb(255, 220, 143);
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+.userplus-icon {
+  color: rgb(6 182 212);
+  font-size: 1.5rem;
+  padding: 10px;
+  background-color: rgb(180, 244, 255);
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+.user-followers {
+  display: flex;
+  gap: 30px;
+  color: #000;
+  margin-top: 100px;
+}
+.user {
+  background-color: #fff;
+  position: relative;
+  padding: 30px;
+  animation: userAnimation 0.4s;
+}
+@keyframes userAnimation {
+  from {
+    transform: translateX(-160px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.user::before {
+  content: "User";
+  width: 40px;
+  height: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  padding: 10px;
+  color: rgb(100 116 139);
+}
+.user-inform {
+  display: flex;
+  justify-content: space-between;
+}
+.user-avatar {
+  border-radius: 1.5rem;
+  width: 5rem;
+  height: 5rem;
+}
+.name-coverPhoto {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.user-twitter {
+  color: rgb(100 116 139);
+}
+.follow-btn {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-bottom: 0.3rem;
+  padding-top: 0.3rem;
+  border: 1px solid rgb(34 211 238);
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+.follow-btn a {
+  color: rgb(34 211 238);
+  transition: 0.3s;
+}
+.follow-btn:hover {
+  background-color: rgb(34 211 238);
+}
+.follow-btn:hover a {
+  color: #fff;
+}
+.bio-location {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.icon-color {
+  color: rgb(0, 91, 91);
+}
+.bio {
+  color: rgb(100 116 139);
+}
+.user-names {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.followers {
+  background-color: #fff;
+  background-color: #fff;
+  position: relative;
+  padding: 30px;
+  height: 330px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transform: translateX(160px);
+  animation: followersAnimation 0.4s forwards;
+  animation-delay: 0.4s;
+}
+@keyframes followersAnimation {
+  from {
+    transform: translateX(160px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.followers::before {
+  content: "Followers";
+  width: 80px;
+  height: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  padding: 10px;
+  color: rgb(100 116 139);
+}
+.follower-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.follower-name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.gitHub-link {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(100 116 139);
+}
+.follower-inform {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.mostUsed {
+  margin-top: 50px;
+  gap: 50px;
+}
+.languages {
+  padding: 40px;
+  background-color: #fff;
+}
+
+#container1 {
+  height: 400px;
+}

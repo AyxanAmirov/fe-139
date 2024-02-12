@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- end -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Clone</title>
+    <!-- fusion chart -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- end -->
+    <!-- css links -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/layout.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link rel="stylesheet" href="./assets/css/animation.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- end -->
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- end -->
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="login">
+          <p>Login</p>
+        </div>
+        <div class="search">
+          <form class="col-lg-9">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="enter username"
+            />
+            <button class="btn">Search</button>
+          </form>
+          
+        </div>
+        <div class="user-informations">
+          <div class="inform col-lg-3">
+            <i class="fa-solid fa-book book-icon"></i>
+            <div id="commonRepos" class="repos">
+              <!-- <p class="num">22</p>
+              <p class="repo">repos</p> -->
+            </div>
+          </div>
+          <div class="inform col-lg-3">
+            <i class="fa-solid fa-user-group persons-icon"></i>
+            <div id="commonFollowers" class="repos">
+              <!-- <p class="num">61</p>
+              <p class="repo">Followers</p> -->
+            </div>
+          </div>
+          <div class="inform col-lg-3">
+            <i class="fa-regular fa-square-full square-icon"></i>
+            <div id="publicGists" class="repos">
+              <!-- <p class="num">16</p>
+              <p class="repo">Public_gists</p> -->
+            </div>
+          </div>
+          <div class="inform col-lg-3">
+            <i class="fa-solid fa-user-plus userplus-icon"></i>
+            <div id="commonFollowing" class="repos">
+              <!-- <p class="num">18</p>
+              <p class="repo">Following</p> -->
+            </div>
+          </div>
+        </div>
+        <div class="user-followers">
+          <div class="user col-lg-6">
+            <!-- <div class="user-inform">
+              <div class="name-coverPhoto">
+                <img src="" alt="" />
+                <div class="user-names">
+                  <p>Murad Orujov</p>
+                  <p>@twitter username</p>
+                </div>
+              </div>
+              <a href="#!" class="follow-btn">Follow</a>
+            </div>
+            <div class="skilss-location">
+              <i class="fa-solid fa-building"></i>
+              <p class="skill">#Frontend</p>
+              <div class="d-flex">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="location">Baku, Azeribaijan</p>
+              </div>
+              <div class="d-flex">
+                <i class="fa-solid fa-link"></i>
+                <p class="link"></p>
+              </div>
+            </div> -->
+          </div>
+          <div class="followers col-lg-6">
+            <!-- <div class="d-flex gap-5">
+              <img src="" alt="" class="follower-img" />
+              <div class="follower-inform">
+                <p class="follower-name"></p>
+                <p class="gitHub-link"></p>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="mostUsed d-flex">
+          <div class="languages col-lg-4">
+            <div id="myChart"></div>
+
+            <script>
+              google.charts.load("current", { packages: ["corechart"] });
+              google.charts.setOnLoadCallback(drawChart);
+
+              function drawChart() {
+                // Set Data
+                const data = google.visualization.arrayToDataTable([
+                  ["PROGRAMMİNG", "Mhl"],
+                  ["HTML", 54.8],
+                  ["CSS", 48.6],
+                  ["SCSS", 44.4],
+                  ["JS", 23.9],
+                  ["PHYTON", 14.5],
+                ]);
+
+                // Set Options
+                const options = {
+                  title: "Lnguages",
+                  is3D: true,
+                };
+
+                // Draw
+                const chart = new google.visualization.PieChart(
+                  document.getElementById("myChart")
+                );
+                chart.draw(data, options);
+              }
+            </script>
+          </div>
+          <div class="col-lg-7">
+            <div id="myPlot" style="width: 100%; max-width: 700px"></div>
+
+            <script>
+              const xArray = ["JS  Games", "1 hour challange", "utilitis"];
+              const yArray = [55, 45, 1];
+
+              const data = [
+                {
+                  x: xArray,
+                  y: yArray,
+                  type: "bar",
+                  orientation: "v",
+                  marker: { color: "rgba(0,0,255,0.6)" },
+                },
+              ];
+
+              const layout = { title: "World Wide Wine Production" };
+
+              Plotly.newPlot("myPlot", data, layout);
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
