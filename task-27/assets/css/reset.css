@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Protest Strike", sans-serif;
+
+}
+::-webkit-input-placeholder {
+  color: #fff;
+    font-size: 17px;
+    text-align: center;
+}

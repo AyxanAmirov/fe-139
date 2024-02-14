@@ -1,0 +1,26 @@
+@media screen and (max-width: 1286px) {
+    .photosPage{
+        display: grid;
+        max-width: 1320px;
+        width: 90%;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 686px) {
+    .photosPage{
+        display: grid;
+        max-width: 1320px;
+        width: 90%;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 546px) {
+    #search{
+        width: 240px;
+    }
+    .btn {
+        font-size: 15px;
+    }
+}
