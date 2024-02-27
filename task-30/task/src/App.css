@@ -1,0 +1,9 @@
+.all-film {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.app-parent {
+  background-color: rgb(139, 59, 59);
+}
