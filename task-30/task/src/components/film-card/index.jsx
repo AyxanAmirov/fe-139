@@ -12,7 +12,7 @@ export default function Film({name,imdb,image}) {
               alt=""
               className="cover"
             />
-            <i class="fa-solid fa-play play-icon"></i>
+            <i className="fa-solid fa-play play-icon"></i>
             </div>
           </div>
           <div className="authors">
