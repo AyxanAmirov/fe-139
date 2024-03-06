@@ -1,0 +1,32 @@
+.box {
+  border: 1px solid green;
+  width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: left;
+}
+.task {
+  font-size: 18px;
+  font-weight: 700;
+}
+.create {
+  font-size: 17px;
+}
+.buttons {
+  text-align: center;
+}
+.btns {
+  cursor: pointer;
+  border-radius: 3px;
+  color: #fff;
+  padding: 5px 10px;
+}
+.delete {
+  background-color: red;
+  border: 1px solid red;
+  margin-right: 10px;
+}
+.update {
+  background-color: blue;
+  border: 1px solid blue;
+}
